@@ -1,4 +1,4 @@
-Identification of the team members.
+# Identification of the team members.
 A description of your game and introduce the game rules.
 A list of features that you have implemented and explain how each coding element
 1 to 5 listed under the coding requirements aforementioned support your features.
