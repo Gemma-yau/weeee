@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include "findcoord.h"
+#include "printcolour.h"
 using namespace std;
 
 struct coord{
