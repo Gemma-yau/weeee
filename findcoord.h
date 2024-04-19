@@ -5,5 +5,6 @@
 #include <vector>
 using namespace std;
 
+bool findcoord(coord point,vector<coord> used);
 
 #endif
