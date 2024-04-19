@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+#include "findcoord.h"
 
 using namespace std;
 
