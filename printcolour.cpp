@@ -10,21 +10,18 @@ using namespace std;
 
 
 void print(coord point,vector<coord> used,coord present){
+   for (int i=0;i<used.size();i++){
+       if (used[i].first==point.first && used[i].second==point.second){
+	    if (point.first == present.first && point.second==present.second)
+                      cout<<Red<<"(•)"<<reset;
+            else cout<<Red<<"•"<<reset;
+           return;
+       }
+   }
     if (point.first == present.first && point.second==present.second){
         cout<<Yellow<<"(•)"<<reset;
         return;
     }
-    if (used.size()==0){
-        cout<<Green<<"•"<<reset;
-        return;
-	}
-        
-    else{
-      for (int i=0;i<used.size();i++)
-       if (used[i].first==point.first && used[i].second==point.second){
-           cout<<Red<<"•"<<reset;
-           return;
-       }
        cout<<Green<<"•"<<reset;
        return;
     } 
