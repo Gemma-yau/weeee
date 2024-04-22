@@ -6,8 +6,7 @@
 
 using namespace std;
 
-void setBoard(){
-  int size=4;
+void setBoard(int size = 4){
   int num = 1;
   int Number[25] = {1,2,3,4,3,2,1,2,3,4,3,2,1,2,3,4,3,2,1,2,3,4,3,2,1};
   srand(time(NULL));
@@ -69,11 +68,14 @@ void setBoard(){
     pos[1] = iPos2;
 }
 
-  //## output the board ##
+  //## print the board ##
   for (int i = 0; i < size; i++){
     for (int j = 0; j < size; j++){
       cout << lst[i][j] << " ";
     }
     cout << endl;
   }
+
+//## return lst ##
+return lst;
 }
