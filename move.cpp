@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <stdlib.h>     //for clear screen
 using namespace std;
 
 struct coord{
@@ -30,10 +31,6 @@ bool canconnect(int next, vector< vector<int> > lst, coord present,coord previou
       }
   }
 }
-
-#include <iostream>
-#include <stdlib.h>
-using namespace std;
 
 void popup_page(){
   system("clear");
@@ -229,7 +226,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
         return ; //what to do? or print "u cant move like that"
    }
 
-   else if (input== 10){  //input=enter
+   else if (input== 10){              //input=enter
       //create a previous point,so if present and previous lie on same line-> dont allow
        if canconnect(next,lst,present,previous,status){
          used.push_back(present);
