@@ -1,4 +1,4 @@
-///to find if the coord is used ir not, return true if used.
+///to find if the coord is used or not, return true if used.
 
 #include <iostream>
 #include <vector>
