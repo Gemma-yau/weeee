@@ -25,20 +25,7 @@ while (true) {
      lose() ;
   }
 
-  if ( status == “lose” ) {         
-        ///print sth;
-    
-  } 
-
-  else if ( status == "end") {           
-        ///print sth
-
-  }
-
-  else {                 //status==win 
-
-  }
-
+  printresult(status);
 }
 
 }
