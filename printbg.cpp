@@ -16,7 +16,7 @@ struct coord{
     int second;
 };
 
-void print(coord point,vector<coord> used,coord present){
+void printdot(coord point,vector<coord> used,coord present){
    for (int i=0;i<used.size();i++){
        if (used[i].first==point.first && used[i].second==point.second){
 	    if (point.first == present.first && point.second==present.second)
@@ -62,7 +62,7 @@ void printbg(string status,coord present,vector<coord> used,int next, vector < v
    p.first=0;
    p.second=i;
    cout<<"  __  ";
-   print(p,used,present);}
+   printdot(p,used,present);}
    cout<<"  __"<<endl;
  
  if (status=="normal"){
@@ -75,9 +75,9 @@ void printbg(string status,coord present,vector<coord> used,int next, vector < v
     cout<<"     ";
     cout<<"|"<<setw(33)<<"|"<<endl;
     cout<<"  "<<lst[3][j]<<"  ";
-    print(p2,used,present);
+    printdot(p2,used,present);
     cout<<setw(37);
-    print(p1,used,present);
+    printdot(p1,used,present);
     cout<<"  "<<lst[1][j];
     cout<<endl;
     }
@@ -87,17 +87,17 @@ void printbg(string status,coord present,vector<coord> used,int next, vector < v
        cout<<"     ";
        cout<<"|"<<setw(33)<<"|"<<endl;
        cout<<"  "<<lst[3][0]<<"  ";
-       print({3,0},used,present);
+       printdot({3,0},used,present);
        cout<<setw(37);
-       print({1,0},used,present);
+       printdot({1,0},used,present);
        cout<<"  "<<lst[1][0];
        cout<<endl;
        cout<<"     ";
        cout<<"|"<<setw(33)<<"|"<<endl;
        cout<<"  "<<lst[3][1]<<"  ";
-       print({3,1},used,present);
+       printdot({3,1},used,present);
        cout<<"     "<<"#####################"<<"      ";
-       print({1,1},used,present);
+       printdot({1,1},used,present);
        cout<<"  "<<lst[1][1];
        cout<<endl;   
        
@@ -107,33 +107,33 @@ void printbg(string status,coord present,vector<coord> used,int next, vector < v
         cout<<"     ";
          cout<<"|"<<"     "<<"#"<<"   Connect Failed  "<<"#"<<"      "<<"|"<<endl;
          cout<<"  "<<lst[3][2]<<"  ";
-         print({3,2},used,present);
+         printdot({3,2},used,present);
          cout<<"     "<<'#'<<"   [ Same Side ]   "<<'#'<<"      "; }
          
     else if (status=="connect fail-number") {
         cout<<"     ";
          cout<<"|"<<"     "<<"#"<<"   Connect Failed  "<<"#"<<"      "<<"|"<<endl;
          cout<<"  "<<lst[3][2]<<"  ";
-         print({3,2},used,present);
+         printdot({3,2},used,present);
          cout<<"     "<<'#'<<" [Incorrect Number]"<<'#'<<"      "; }
     
     else if (status=="invalid movement"){
         cout<<"     ";
         cout<<"|"<<"     "<<"#"<<"      Invalid      "<<"#"<<"      "<<"|"<<endl;
         cout<<"  "<<lst[3][2]<<"  ";
-         print({3,2},used,present);
+         printdot({3,2},used,present);
          cout<<"     "<<'#'<<"      Movement     "<<'#'<<"      ";
     }
 
-       print({1,2},used,present);
+       printdot({1,2},used,present);
        cout<<"  "<<lst[1][2];
        cout<<endl;
        cout<<"     ";
        cout<<"|"<<"     "<<"#####################"<<"      "<<"|"<<endl;
        cout<<"  "<<lst[3][3]<<"  ";
-       print({3,3},used,present);
+       printdot({3,3},used,present);
        cout<<setw(37);
-       print({1,3},used,present);
+       printdot({1,3},used,present);
        cout<<"  "<<lst[1][3];
        cout<<endl;
 
@@ -148,7 +148,7 @@ void printbg(string status,coord present,vector<coord> used,int next, vector < v
    p.first=2;
    p.second=i;
    cout<<"  __  ";
-   print(p,used,present);}
+   printdot(p,used,present);}
    cout<< "  __ " <<endl;
 
     cout<<"     ";
