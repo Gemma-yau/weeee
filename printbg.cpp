@@ -125,8 +125,6 @@ void printbg(string status,coord present,vector<coord> used,int next, vector < v
          cout<<"     "<<'#'<<"      Movement     "<<'#'<<"      ";
     }
 
-
-
        print({1,2},used,present);
        cout<<"  "<<lst[1][2];
        cout<<endl;
