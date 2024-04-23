@@ -31,6 +31,28 @@ bool canconnect(int next, vector< vector<int> > lst, coord present,coord previou
   }
 }
 
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+void popup_page(){
+  system("clear");
+  cout<<endl<<endl<<endl;
+  cout<<"     ";
+  cout<<"#################################"<<endl;
+  cout<<"     "<<"#"<<"                               "<<"#"<<endl;
+  cout<<"     "<<"#"<<"   [      Return  (Q)      ]   "<<"#"<<endl;
+  cout<<"     "<<"#"<<"                               "<<"#"<<endl;
+  cout<<"     "<<"#"<<"                               "<<"#"<<endl;
+  cout<<"     "<<"#"<<"   [      Restart (R)      ]   "<<"#"<<endl;
+  cout<<"     "<<"#"<<"                               "<<"#"<<endl;
+  cout<<"     "<<"#"<<"                               "<<"#"<<endl;
+  cout<<"     "<<"#"<<"   [  Start a New Game (N) ]   "<<"#"<<endl;
+  cout<<"     "<<"#"<<"                               "<<"#"<<endl;
+  cout<<"     "<<"#################################"<<endl;
+  cout<<endl;
+  }
+
 void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > lst, string &status) {       /////UNDONE!!, FILL IN THE ARGUMENTS
  initscr();
  keypad(stdscr,TRUE);
