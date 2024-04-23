@@ -9,7 +9,7 @@ using namespace std;
 #define Yellow  "\033[33m"   
 
 
-void print(coord point,vector<coord> used,coord present){
+void printdot(coord point,vector<coord> used,coord present){
    for (int i=0;i<used.size();i++){
        if (used[i].first==point.first && used[i].second==point.second){
 	    if (point.first == present.first && point.second==present.second)
