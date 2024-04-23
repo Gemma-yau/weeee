@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include "move.h"
+#include "findcoord.h"
 
 using namespace std;
 
