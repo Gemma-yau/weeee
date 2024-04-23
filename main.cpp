@@ -19,7 +19,7 @@ while (true) {
 
   printbg();
 
-  while (status !=“end” && status !=“lose”) {
+  while (status !=“end” && status !=“lose” && status!="win") {
      status=“normal” ;     #reset_the_content_of_status 
      move();
      printbg();
@@ -32,8 +32,12 @@ while (true) {
     
   } 
 
-  else {                   //status==end (wanna restart)
+  else if ( status == "end") {           
         ///print sth
+
+  }
+
+  else {                 //status==win 
 
   }
 
