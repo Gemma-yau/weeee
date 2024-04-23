@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <vector>
 #include <stdlib.h>
-// #include "printcolour.h"
+#include "printcolour.h"
 using namespace std;
 
 #define reset  "\033[0m"
