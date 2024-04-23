@@ -12,8 +12,6 @@ while (true) {
   coord present={0,0} ;
   vector<coord> used = { {0,0} };
 
-//let them click enter to start 
-
 //print the main page of the game
 //receive the enter button
 
