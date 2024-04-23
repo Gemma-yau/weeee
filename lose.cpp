@@ -11,7 +11,6 @@ void lose(string &status, int next, int size = 4, coord present, <vecotr<vecotr<
       for ( int j = 0; j < size; j++ ){          //## for every element in that row ##
         coord step = {i,j};
         if ( !find(used.begin(),used.end(),step) && board[i][j] == next ){      //## if not in used and value == next
-          status ="normal";
           return;
         }
       }
