@@ -23,7 +23,8 @@ while (true) {
      status=“normal” ;     #reset_the_content_of_status 
      move();
      printbg();
-     lose() ;   
+     win();
+     lose() ;
   }
 
   if ( status == “lose” ) {         
