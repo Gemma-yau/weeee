@@ -255,6 +255,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
 	   next=1;               //crestart the process
            return;
       }
+	      
       else if (choice == 78 || choice == 110){             ///N -> start a new game
             status="end";
             /////generate a new map
@@ -262,13 +263,10 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
       }
   }
 
-   else{                               //input= sth else-> retype
+else {                               //input= sth else-> retype
       return;
-    }
+ }
 
-  }
-
-    endwin();  // End ncurses
-        return 0;
+	// endwin();  // End ncurses??
 }
 
