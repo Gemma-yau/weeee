@@ -51,7 +51,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
          status="invalid movement";
          return;}              // or show "u cant move like that"
       if (present.first==3){
-        if findcoord({1,present.second},used)
+        if (findcoord({1,present.second},used))
 	  status="invalid movement";                    /// this point is used alr! u cant move like this
 	 else 
            present.first=1;
@@ -93,7 +93,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
 	 status="invalid movement";
          return;}         // or show "u cant move like that"
         if (present.first==1){
-          if findcoord({3,present.second},used)
+          if (findcoord({3,present.second},used))
 	    status="invalid movement";     /// this point is used alr! u cant move like this
 	  else 
              present.first=3;
@@ -137,7 +137,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
          status="invalid movement";
 	 return;} // or show "u cant move like that"
       if (present.first==2){
-        if findcoord({0,present.second},used)
+        if (findcoord({0,present.second},used))
 	  status="invalid movement";           /// this point is used alr! u cant move like this
 	 else 
            present.first=0;
@@ -179,7 +179,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
            status="invalid movement";
 	   return;} // or show "u cant move like that"
          if (present.first==0){
-         if findcoord({2,present.second},used)
+         if (findcoord({2,present.second},used))
 	  status="invalid movement";         /// this point is used alr! u cant move like this
 	 else
            present.first=2;
