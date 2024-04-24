@@ -9,8 +9,6 @@
 #include "printcolour.h" 
 using namespace std;
 
-bool canconnect(int next, vector< vector<int> > lst, coord present,coord previous,string &status);
-void popup_page();
-void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > lst, string &status);
+void printbg(string status,coord present,vector<coord> used,int next, vector < vector<int>> lst )
 
 #endif
