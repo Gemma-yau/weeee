@@ -1,7 +1,9 @@
 #include <iostream>
 #include <vector>
 #include <stdlib.h>
+#include <unistd.h>
 #include "printcolour.h"
+#include "getch.h"
 using namespace std;
 
 #define reset  "\033[0m"
@@ -46,5 +48,10 @@ void printmainpage() {
   cout<<"     "<<"         D D     OOOOO    T    SSSSS        "<<Yellow<<"/        "<<endl;
   cout<<"     "<<"                     \\                     /         "<<endl;
   cout<<"     "<<"                      •                   •         "<<reset<<endl<<endl<<endl;
-  
+  usleep(5000000);
+  cout<<"                        [ PRESS ENTER TO START ]"<<endl;
+ int check=getch();
+ while (check !=10)
+	 check = getch();
+
 }
