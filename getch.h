@@ -2,7 +2,8 @@
 #define GETCH_H
 
 #include <iostream>
-#include "printcolour.h"
+#include <termios.h>
+#include <unistd.h>
 using namespace std;
 
 int getch();
