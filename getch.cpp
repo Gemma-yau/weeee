@@ -1,6 +1,7 @@
 #include <iostream>
 #include <termios.h>
 #include <unistd.h>
+#include "getch.h"
 
 int getch() {
     struct termios oldTermios, newTermios;
