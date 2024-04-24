@@ -1,8 +1,9 @@
-#include <ncurses.h>
 #include <iostream>
 #include <vector>
 #include <string>
 #include <stdlib.h>     //for clear screen
+#include "getch.h"
+#include "popup_page.h"
 using namespace std;
 
 struct coord{
@@ -51,12 +52,10 @@ void popup_page(){
   }
 
 void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > lst, string &status) {       /////UNDONE!!, FILL IN THE ARGUMENTS
- initscr();
- keypad(stdscr,TRUE);
  coord previous=present;
 
  int input=getch();
-   if (input==KEY_RIGHT){
+   if (input==68 || input==100){
      
       if(present.first==1){
          status="invalid movement";
@@ -98,7 +97,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
       }
   
 
-   else if (input==KEY_LEFT){
+   else if (input==65 || input==97){
 
         if(present.first==3){
 	 status="invalid movement";
@@ -142,7 +141,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
 
 
 
-   else if (input==KEY_UP){
+   else if (input==87 || input==119){
 
         if(present.first==0){
          status="invalid movement";
@@ -184,7 +183,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
 	break; //what to do? or print "u cant move like that"
    }
 
-   else if (input==KEY_DOWN){
+   else if (input==83 || input==115){
         
 	 if(present.first==2){
            status="invalid movement";
