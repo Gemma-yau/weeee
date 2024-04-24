@@ -11,10 +11,6 @@ using namespace std;
 #define Yellow  "\033[33m"   
 #define Black   "\033[30m"
 
-struct coord{
-    int first;
-    int second;
-};
 
 void printdot(coord point,vector<coord> used,coord present){
    for (int i=0;i<used.size();i++){
