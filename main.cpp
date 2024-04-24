@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "getch.h"
 #include "findcoord.h"
 #include "lose.h"
 #include "move.h"
