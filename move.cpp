@@ -217,7 +217,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
 
    else if (input== 10){              //input=enter
       //create a previous point,so if present and previous lie on same line-> dont allow
-       if canconnect(next,lst,present,previous,status){
+       if (canconnect(next,lst,present,previous,status)) {
          used.push_back(present);
 	 next+=1;
        }
