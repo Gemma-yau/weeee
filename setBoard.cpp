@@ -6,7 +6,8 @@
 
 using namespace std;
 
-void setBoard(int size = 4){
+vector<vector<int>> setBoard(){
+  int size = 4
   int num = 1;
   int Number[25] = {1,2,3,4,3,2,1,2,3,4,3,2,1,2,3,4,3,2,1,2,3,4,3,2,1};
   srand(time(NULL));
@@ -69,12 +70,12 @@ void setBoard(int size = 4){
 }
 
   //## print the board ##
-  for (int i = 0; i < size; i++){
-    for (int j = 0; j < size; j++){
-      cout << lst[i][j] << " ";
-    }
-    cout << endl;
-  }
+  // for (int i = 0; i < size; i++){
+  //   for (int j = 0; j < size; j++){
+  //     cout << lst[i][j] << " ";
+  //   }
+  //   cout << endl;
+  // }
 
 //## return lst ##
 return lst;
