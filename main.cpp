@@ -5,7 +5,7 @@
 #include "lose.h"
 #include "move.h"
 #include "printbg.h"
-#include "printcolour"
+#include "printcolour.h"
 #include "printresult.h"
 #include "setBoard.h"
 #include "win.h"
