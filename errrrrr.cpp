@@ -796,7 +796,8 @@ void printresult(string status){
 
 int main() {
   while (true){
-  string status= "normal", mode;
+  string status= "normal", 
+  int mode;
   int next=1;
   coord present={0,0};
   vector<coord> used = { {0,0} };
