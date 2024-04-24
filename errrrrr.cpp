@@ -807,9 +807,11 @@ int main() {
     int c = 0;
     while (c < 16){
       for ( int i = 1; i < 6; i++){
-        array[c] = i;}
+        array[c] = i;
+        c++}
       for ( int i = 6; i > 1; i--){
-      	array[c] = i;}}}
+      	array[c] = i;
+      	c++;}}}
   vector<vector<int>> board = setBoard(array);
   printbg(status, present, used, next, board, mode);
   
