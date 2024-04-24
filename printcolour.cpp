@@ -48,8 +48,8 @@ void printmainpage() {
   cout<<"     "<<"         D D     OOOOO    T    SSSSS        "<<Yellow<<"/        "<<endl;
   cout<<"     "<<"                     \\                     /         "<<endl;
   cout<<"     "<<"                      •                   •         "<<reset<<endl<<endl<<endl;
-  usleep(5000000);
-  cout<<"                        [ PRESS ENTER TO START ]"<<endl;
+  usleep(1000000);
+  cout<<"                                     [ PRESS ENTER TO START ]"<<endl;
  int check=getch();
  while (check !=10)
 	 check = getch();
