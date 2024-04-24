@@ -4,7 +4,6 @@
 #include "findcoord.h"
 #include "lose.h"
 #include "move.h"
-#include "popup_page.h"
 #include "printbg.h"
 #include "printcolour"
 #include "printresult.h"
