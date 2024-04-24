@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
+#include "printresult.h"
 using namespace std;
 
 void printresult(string status){
