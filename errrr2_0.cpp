@@ -819,7 +819,7 @@ int main() {
 	}
 }
 
-  vector<vector<int>> board = setBoard(array);
+  vector<vector<int>> board = setBoard(seq);
   printbg(status, present, used, next, board, mode);
   
   while (status != "end" && status != "lose" && status != "win") {
