@@ -16,7 +16,7 @@ using namespace std;
 int main() {
 
 while (true) {
-  vector<vector<int>> board = setboard();           //generate number  
+  vector<vector<int>> board = setBoard();           //generate number  
   string status="normal";
   int next=1;
   coord present={0,0} ;
