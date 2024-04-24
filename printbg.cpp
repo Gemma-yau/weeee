@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <vector>
 #include <stdlib.h>
-#include "printcolour.h"
+#include "printcolour.h" 
 using namespace std;
 
 #define reset  "\033[0m"
@@ -10,25 +10,6 @@ using namespace std;
 #define Red   "\033[31m"      
 #define Yellow  "\033[33m"   
 #define Black   "\033[30m"
-
-
-void printdot(coord point,vector<coord> used,coord present){
-   for (int i=0;i<used.size();i++){
-       if (used[i].first==point.first && used[i].second==point.second){
-	    if (point.first == present.first && point.second==present.second)
-                      cout<<Red<<"⦾"<<reset;
-            else cout<<Red<<"•"<<reset;
-           return;
-       }
-   }
-    if (point.first == present.first && point.second==present.second){
-        cout<<Yellow<<"⦾"<<reset;
-        return;
-    }
-       cout<<Green<<"•"<<reset;
-       return;
-    } 
-
 
 void printbg(string status,coord present,vector<coord> used,int next, vector < vector<int>> lst ) {
    
