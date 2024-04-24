@@ -7,7 +7,6 @@
 
 using namespace std;
 
-bool findcoord(coord point,vector<coord> used);
 
 void lose(string &status, int next, int size, coord present, vector<vector<int>> board, vector<coord> used) {
   string seq="1234321234321234";
