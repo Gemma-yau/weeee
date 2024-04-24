@@ -2,10 +2,9 @@
 #define PRINTRESULT_H
 
 #include <iostream>
-#include <vector>
-#include "printcolour.h"
+#include <stdlib.h>
 using namespace std;
 
-bool findcoord(coord point,vector<coord> used);
+void printresult(string status);
 
 #endif
