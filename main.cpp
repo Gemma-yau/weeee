@@ -1,12 +1,22 @@
 #include <iostream>
-#include <>
-#using namespace std;
+#include <vector>
+#include <string>
+#include "findcoord.h"
+#include "lose.h"
+#include "move.h"
+#include "popup_page.h"
+#include "printbg.h"
+#include "printcolour"
+#include "printresult.h"
+#include "setBoard.h"
+#include "win.h"
 
+using namespace std;
 
 int main() {
 
 while (true) {
-  setboard()；           //generate number  
+  vector<vector<int>> board = setboard()；           //generate number  
   string status=“normal” ;
   int next=1;
   coord present={0,0} ;
@@ -15,14 +25,14 @@ while (true) {
 //print the main page of the game
 //receive the enter button
 
-  printbg();
+  printbg(status, present, used, next, board);
 
   while (status !=“end” && status !=“lose” && status!="win") {
      status=“normal” ;     #reset_the_content_of_status 
-     move();
-     printbg();
-     win();
-     lose() ;
+     move(used, present, next, board, status);
+     printbg(status, present, used, next, board);
+     win(status, used);
+     lose(status, next, 4, present, board, used) ;
   }
 
   printresult(status);
