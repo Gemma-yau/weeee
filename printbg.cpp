@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <vector>
 #include <stdlib.h>
+#include <string>
 #include "printcolour.h" 
 #include "printbg.h"
 using namespace std;
