@@ -8,6 +8,6 @@
 
 using namespace std;
 
-vector < vector <int> > setBoard(int size);
+vector < vector <int> > setBoard();
 
 #endif
