@@ -131,7 +131,7 @@ void printdot(coord point,vector<coord> used,coord present){
        return;
     } 
 
-void printmainpage(string &mode) {
+int printmainpage() {
   cout<<endl<<endl<<endl;
   cout<<"     "<<"       "<<Yellow<<"•                                            "<<endl;
   cout<<"     "<<"        \\                                            "<<reset<<endl;
@@ -159,12 +159,11 @@ void printmainpage(string &mode) {
   int mode=getch();                  //mode=1(easy), mode=2(hard)
   while (mode != 1 && mode != 2)
     int mode=getch();
-  usleep(1000);
- return;	 
+ return mode;	 
 }
 
 
-void printbg(string status,coord present,vector<coord> used,int next, vector < vector<int>> lst, int mode ) {
+void printbg(string status,coord present,vector<coord> used,int next, vector < vector<int>> lst,int mode) {
    if (status=="end")
     return;
    system("clear");
@@ -796,16 +795,15 @@ void printresult(string status){
 
 int main() {
   while (true){
-  string status= "normal", 
-  int mode;
+  string status= "normal";
   int next=1;
   coord present={0,0};
   vector<coord> used = { {0,0} };
   system("clear");
-  printmainpage(mode);      //print the main page of the game
-                             //receive the enter button
+  int mode=printmainpage();      //print the main page of the game
+                             //receive the enter button and also determine the mode
   int array[20] = {1,2,3,4,3,2,1,2,3,4,3,2,1,2,3,4,1};
-  if(mode == "hard"){
+  if(mode == 2){
     int c = 0;
     while (c < 16){
       for ( int i = 1; i < 6; i++){
