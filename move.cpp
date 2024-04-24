@@ -5,6 +5,7 @@
 #include "getch.h"
 #include "printcolour.h"            //for struct coord
 #include "findcoord.h"
+#include "move.h"
 using namespace std;
 
 
