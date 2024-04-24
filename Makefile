@@ -27,7 +27,7 @@ setBoard.o: setBoard.cpp setBoard.h
 win.o: win.cpp win.h
 	g++ $(FLAGS) -c $<
 
-ctd: findcoord.o getch.o lose.o move.o printbg.o printcolour.o printresult.o setBoard.o win.o
+ctd: main.cpp findcoord.o getch.o lose.o move.o printbg.o printcolour.o printresult.o setBoard.o win.o
 	g++ $(FLAGS) $^ -o ctd
 
 clean:
