@@ -2,12 +2,11 @@
 #define PRINTBG_H
 
 #include <iostream>
+#include <iomanip>
 #include <vector>
+#include <stdlib.h>
 #include <string>
-#include <stdlib.h>     //for clear screen
-#include "getch.h"
-#include "printcolour.h"            //for struct coord
-#include "findcoord.h"
+#include "printcolour.h" 
 using namespace std;
 
 bool canconnect(int next, vector< vector<int> > lst, coord present,coord previous,string &status);
