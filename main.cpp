@@ -22,8 +22,8 @@ while (true) {
   coord present={0,0} ;
   vector<coord> used = { {0,0} };
 
-//print the main page of the game
-//receive the enter button
+printmainpage();      //print the main page of the game
+                       //receive the enter button
 
   printbg(status, present, used, next, board);
 
