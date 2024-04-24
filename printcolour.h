@@ -10,6 +10,6 @@ struct coord{
     int second;
 };
 
-void print(coord point, vector<coord> used, coord present);
+void printdot(coord point, vector<coord> used, coord present);
 
 #endif
