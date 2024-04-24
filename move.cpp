@@ -3,7 +3,6 @@
 #include <string>
 #include <stdlib.h>     //for clear screen
 #include "getch.h"
-#include "popup_page.h"
 using namespace std;
 
 struct coord{
