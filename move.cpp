@@ -8,14 +8,6 @@
 #include "move.h"
 using namespace std;
 
-
-bool findcoord(coord point,vector<coord> used){              //to check if the dot has been used or not
- for (int i=0;i<used.size();i++){
-  if (used[i].first == point.first && used[i].second == point.second)
-   return true;}
-   return false;
- }
-
 bool canconnect(int next, vector< vector<int> > lst, coord present,coord previous,string &status){           
  if (present.first == previous.first){
    status= "connect fail-same line";   // cant work cuz they lie on same line
