@@ -3,12 +3,10 @@
 #include <string>
 #include <stdlib.h>     //for clear screen
 #include "getch.h"
+#include "printcolour.h"            //for struct coord
+#include "findcoord.h"
 using namespace std;
 
-struct coord{
-    int first;
-    int second;
-};
 
 bool findcoord(coord point,vector<coord> used){              //to check if the dot has been used or not
  for (int i=0;i<used.size();i++){
