@@ -12,4 +12,6 @@ struct coord{
 
 void printdot(coord point, vector<coord> used, coord present);
 
+void printmainpage();
+
 #endif
