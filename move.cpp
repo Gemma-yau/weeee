@@ -48,7 +48,7 @@ void popup_page(){
   cout<<endl;
   }
 
-void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > lst, string &status) {       /////UNDONE!!, FILL IN THE ARGUMENTS
+void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > lst, string &status) {       
  coord previous=present;
 
  int input=getch();
