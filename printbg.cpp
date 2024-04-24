@@ -157,14 +157,3 @@ void printbg(string status,coord present,vector<coord> used,int next, vector < v
         cout<<lst[2][i];}
         cout<<endl;
 }
-
-
-int main(){
-  string status="invalid movement";
-  coord present={1,1};
-  vector<coord> used={{0,2},{1,1}};
-  int next=2;
-  vector < vector<int>> lst ={ {1,3,3,1},{4,1,3,4},{2,2,2,3},{3,4,2,2} };
-  
-  printbg(status,present,used,next,lst);
-}
