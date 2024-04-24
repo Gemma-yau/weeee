@@ -170,7 +170,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
 	   }
 	}
 	status="invalid movement";       ///the whole line is used -> error
-	break; //what to do? or print "u cant move like that"
+	return; //what to do? or print "u cant move like that"
    }
 
    else if (input==83 || input==115){
