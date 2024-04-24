@@ -18,15 +18,3 @@ bool findcoord(coord point,vector<coord> used){
    return false;
  }
 
- int main(){
-  vector<coord> used={{0,0},{1,0}};
-  if (findcoord({1,1},used))
-  cout<<"yes";
-  else cout<<"no";
-  cout<<endl;
-
-  if (findcoord({0,0},used))
-  cout<<"yes";
-  else cout<<"no";
-  cout<<endl;
- }
