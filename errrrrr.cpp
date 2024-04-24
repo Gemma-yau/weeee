@@ -150,28 +150,25 @@ void printmainpage(string &mode) {
   cout<<"     "<<"                     \\                     /         "<<endl;
   cout<<"     "<<"                      •                   •         "<<reset<<endl<<endl<<endl;
   usleep(1000000);
-  
-  cout<<"mode: [easy / hard] ";
-  cin >> mode;
-  cout << mode;
-  while (mode != "easy" && mode != "hard"){
-    cout << "invalid mode, please input \"easy\" or \"hard\"" << endl;
-    cin >> mode;}
-
-  usleep(1000);
   cout<<"                                     [ PRESS ENTER TO START ]"<<endl;
- int check=getch();
- while (check !=10)
+  int check=getch();
+  while (check !=10)
 	 check = getch();
+ system("clear");	
+  cout<<"mode: [ easy (1) / hard (2) ] ";
+  int mode=getch();                  //mode=1(easy), mode=2(hard)
+  while (mode != 1 && mode != 2)
+    int mode=getch();
+  usleep(1000);
  return;	 
 }
 
 
-void printbg(string status,coord present,vector<coord> used,int next, vector < vector<int>> lst, string mode ) {
+void printbg(string status,coord present,vector<coord> used,int next, vector < vector<int>> lst, int mode ) {
    if (status=="end")
     return;
    system("clear");
-   string process=(mode == "easy")?"1234321234321234":"123456543212345654321234";
+   string process=(mode == 1)?"1234321234321234":"123456543212345654321234";
    
    cout<<endl;        
    cout<<"   Process : ";             //printing process
