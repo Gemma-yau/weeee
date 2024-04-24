@@ -3,13 +3,9 @@
 #include <iostream>
 #include <vector>
 #include "findcoord.h"
-#include "printcolour.h"
+#include "printcolour.h"   //for struct coord
 using namespace std;
 
-struct coord{
-    int first;
-    int second;
-};
 
 bool findcoord(coord point,vector<coord> used){
  for (int i=0;i<used.size();i++){
