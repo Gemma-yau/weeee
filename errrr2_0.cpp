@@ -324,7 +324,7 @@ void popup_page(){
   cout<<endl;
   }
 
-void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > lst, string &status, int Number[20]) {
+void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > lst, string &status, int seq[20]) {
 
  int input=getch();
    if (input==68 || input==100){
@@ -503,7 +503,6 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
    }
 
 
-
    else if (input==87 || input==119){
 
         if(present.first==0){
@@ -680,7 +679,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
 
    else if (input== 10){              //input=enter
       //create a previous point,so if present and previous lie on same line-> dont allow
-       if (canconnect(next,lst,present,status,used, Number)){
+       if (canconnect(next,lst,present,status,used,seq)){
          used.push_back(present);
 	 next+=1;
 	 status="connect";
@@ -802,20 +801,20 @@ int main() {
   coord present={0,0};
   vector<coord> used = { {0,0} };
   system("clear");
-  int mode=printmainpage();      //print the main page of the game
+  int mode = printmainpage();      //print the main page of the game
                              //receive the enter button and also determine the mode
-  int array[20] = {1,2,3,4,3,2,1,2,3,4,3,2,1,2,3,4,1};
+  int seq[20] = {1,2,3,4,3,2,1,2,3,4,3,2,1,2,3,4,1};
   if (mode == 2){
     int c = 0;
     while (c < 16){
       for ( int i = 1; i < 7; i++){
-        array[c] = i;
+        seq[c] = i;
 	c++ ;}
       for ( int i = 5; i > 0; i--){
-      	array[c] = i;
+      	seq[c] = i;
 	c++ ; }
 	for (int i=2;i<7;i++){
-	 array[c]=i;
+	 seq[c]=i;
 	 c++ ;}
 	}
 }
@@ -825,11 +824,11 @@ int main() {
   
   while (status != "end" && status != "lose" && status != "win") {
      status="normal" ;                    //reset_the_content_of_status
-     move(used, present, next, board, status, array);
+     move(used, present, next, board, status, seq);
      printbg(status, present, used, next, board, mode);
      win(status, used);
      if (status=="connect")
-      lose(status, next, 4, present, board, used, array) ;
+      lose(status, next, 4, present, board, used, seq) ;
   }
   printresult(status);
 }
