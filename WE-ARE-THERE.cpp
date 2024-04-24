@@ -767,7 +767,7 @@ void printresult(string status){
   }
 
   else if (status=="lose"){
-   cout<<endl<<endl<<endl;
+   cout<<endl<<endl<<endl<<endl<<endl;
    cout<<"     "<<"######################################"<<endl;
    cout<<"     "<<"#"<<"                                    "<<"#"<<endl;
    cout<<"     "<<"#"<<"   L       OOOOO   SSSSS    EEEEE   "<<"#"<<endl;
@@ -783,7 +783,7 @@ void printresult(string status){
   }
 
   else {
-   cout<<endl<<endl<<endl;
+   cout<<endl<<endl<<endl<<endl<<endl;
    cout<<"       "<<"🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉"<<endl;
    cout<<"     "<<"  "<<"                                    "<<"  "<<endl;
    cout<<"     "<<"🎉"<<"    W       W   IIIII    N     N    "<<"🎉"<<endl;
