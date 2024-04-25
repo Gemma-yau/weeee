@@ -382,7 +382,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
 	   }
 
 	   else {             //present.second=3
-	       for (int i=2;i>0;i--){
+	       for (int i=2;i>-1;i--){
 	         if (!findcoord({1,i},used)){
 		   present.first=1;
 		   present.second=i;
@@ -470,7 +470,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
 	   }
 
 	   else {             //present.second=3
-	       for (int i=2;i>0;i--){
+	       for (int i=2;i>-1;i--){
 	         if (!findcoord({3,i},used)){
 		   present.first=3;
 		   present.second=i;
@@ -558,7 +558,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
 	   }
 
 	   else {             //present.second=3
-	       for (int i=2;i>0;i--){
+	       for (int i=2;i>-1;i--){
 	         if (!findcoord({0,i},used)){
 		   present.first=0;
 		   present.second=i;
@@ -645,7 +645,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
 	   }
 
 	   else {             //present.second=3
-	       for (int i=2;i>0;i--){
+	       for (int i=2;i>-1;i--){
 	         if (!findcoord({2,i},used)){
 		   present.first=2;
 		   present.second=i;
