@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include "printresult.h"
+#include "getch.h"
 using namespace std;
 
 void printresult(string status){
@@ -56,4 +57,4 @@ void printresult(string status){
   while (get != 10)
     get=getch();
 }
-}
+
