@@ -38,7 +38,7 @@ while (true) {
   }
 
   vector<vector<int>> board = setBoard(seq);           //generate number 
-  printbg(status, present, used, next, board);
+  printbg(status, present, used, next, board, mode);
 
   while (status !="end" && status !="lose" && status!="win") {
     status="normal" ;     //reset_the_content_of_status 
