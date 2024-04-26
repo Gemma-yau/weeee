@@ -29,8 +29,7 @@ void printdot(coord point,vector<coord> used,coord present){
        return;
     } 
 
-void printmainpage() {
-  system("clear");
+int printmainpage() {
   cout<<endl<<endl<<endl;
   cout<<"     "<<"       "<<Yellow<<"•                                            "<<endl;
   cout<<"     "<<"        \\                                            "<<reset<<endl;
@@ -50,8 +49,23 @@ void printmainpage() {
   cout<<"     "<<"                      •                   •         "<<reset<<endl<<endl<<endl;
   usleep(1000000);
   cout<<"                                     [ PRESS ENTER TO START ]"<<endl;
- int check=getch();
- while (check !=10)
-	 check = getch();
+  int check=getch();
+  while (check !=10)
+		check = getch();
+  system("clear");
+	cout<<endl<<endl<<endl<<endl<<endl;
+  cout<<"     "<<"                                                   "<<endl;
+  cout<<"     "<<"                        MODE                       "<<endl;
+  cout<<"     "<<"                                                   "<<endl;
+  cout<<"     "<<"       ***           ***    ***           ***      "<<endl;
+  cout<<"     "<<"       *    EASY (1)   *    *    HARD (2)   *      "<<endl;
+  cout<<"     "<<"       ***           ***    ***           ***      "<<endl;
+  cout<<endl<<endl;
 
+  int want=getch();                  //mode=1(easy), mode=2(hard)
+  while (want != 49 && want != 50) 
+      want = getch();
+   if (want == 49)
+        return 1;
+   else return 2;
 }
