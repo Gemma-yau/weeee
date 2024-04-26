@@ -13,10 +13,11 @@ using namespace std;
 #define Yellow  "\033[33m"   
 #define Black   "\033[30m"
 
-void printbg(string status,coord present,vector<coord> used,int next, vector < vector<int>> lst ) {
-   
+void printbg(string status,coord present,vector<coord> used,int next, vector < vector<int>> lst, int mode) {
+   if (status=="end")
+      return;
    system("clear");
-   string process="1234321234321234";
+   string process=(mode == 1)?"1234321234321234":"123456543212345654321234";
    
    cout<<endl;        
    cout<<"   Process : ";             //printing process
@@ -44,7 +45,7 @@ void printbg(string status,coord present,vector<coord> used,int next, vector < v
    printdot(p,used,present);}
    cout<<"  __"<<endl;
  
- if (status=="normal"){
+ if (status=="normal" || status=="connect"){
     for (int j=0;j<4;j++){
     coord p1,p2;
     p1.first=1;
