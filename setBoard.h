@@ -8,6 +8,6 @@
 
 using namespace std;
 
-vector < vector <int> > setBoard();
+vector < vector < int >> setBoard(int Number[20]);
 
 #endif
