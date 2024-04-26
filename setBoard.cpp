@@ -6,10 +6,9 @@
 
 using namespace std;
 
-vector<vector<int>> setBoard(){
+vector<vector<int>> setBoard(int Number[20]){
   int size = 4;
   int num = 1;
-  int Number[25] = {1,2,3,4,3,2,1,2,3,4,3,2,1,2,3,4,3,2,1,2,3,4,3,2,1};
   srand(time(NULL));
 
   vector < vector <int> > lst;
