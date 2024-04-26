@@ -22,16 +22,16 @@ void printresult(string status){
   }
 
   else if (status=="lose"){
-   cout<<endl<<endl<<endl;
+   cout<<endl<<endl<<endl<<endl<<endl;
    cout<<"     "<<"######################################"<<endl;
    cout<<"     "<<"#"<<"                                    "<<"#"<<endl;
-   cout<<"     "<<"#"<<"   L      OOOOO    SSSSS    EEEEE   "<<"#"<<endl;
-   cout<<"     "<<"#"<<"   L      O   O    S        E       "<<"#"<<endl;
-   cout<<"     "<<"#"<<"   L      O   O    S        E       "<<"#"<<endl;
-   cout<<"     "<<"#"<<"   L      O   O    SSSSS    EEEEE   "<<"#"<<endl;
-   cout<<"     "<<"#"<<"   L      O   O        S    E       "<<"#"<<endl;
-   cout<<"     "<<"#"<<"   L      O   O        S    E       "<<"#"<<endl;
-   cout<<"     "<<"#"<<"   LLLLL  OOOOO    SSSSS    EEEEE   "<<"#"<<endl;
+   cout<<"     "<<"#"<<"   L       OOOOO   SSSSS    EEEEE   "<<"#"<<endl;
+   cout<<"     "<<"#"<<"   L       O   O   S        E       "<<"#"<<endl;
+   cout<<"     "<<"#"<<"   L       O   O   S        E       "<<"#"<<endl;
+   cout<<"     "<<"#"<<"   L       O   O   SSSSS    EEEEE   "<<"#"<<endl;
+   cout<<"     "<<"#"<<"   L       O   O       S    E       "<<"#"<<endl;
+   cout<<"     "<<"#"<<"   L       O   O       S    E       "<<"#"<<endl;
+   cout<<"     "<<"#"<<"   LLLLL   OOOOO   SSSSS    EEEEE   "<<"#"<<endl;
    cout<<"     "<<"#"<<"                                    "<<"#"<<endl;
    cout<<"     "<<"######################################"<<endl;
    cout<<endl;
@@ -52,4 +52,8 @@ void printresult(string status){
    cout<<"       "<<"🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉 🎉"<<endl;
    cout<<endl;
   }
+  int get=getch();
+  while (get != 10)
+    get=getch();
+}
 }
