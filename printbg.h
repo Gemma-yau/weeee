@@ -9,6 +9,6 @@
 #include "printcolour.h" 
 using namespace std;
 
-void printbg(string status,coord present,vector<coord> used,int next, vector < vector<int>> lst, int mode )
+void printbg(string status,coord present,vector<coord> used,int next, vector < vector<int>> lst, int mode );
 
 #endif
