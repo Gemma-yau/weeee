@@ -8,12 +8,13 @@
 #include "move.h"
 using namespace std;
 
-bool canconnect(int next, vector< vector<int> > lst, coord present,coord previous,string &status){           
- if (present.first == previous.first){
-   status= "connect fail-same line";   // cant work cuz they lie on same line
-   return false;}
+bool canconnect(int next, vector< vector<int> > lst, coord present, string &status, vector<coord> used, int seq[20]){           
+	int lent=used.size();
+	coord previous=used[lent-1];
+if (present.first == previous.first){
+	status= "connect fail-same line";   // cant work cuz they lie on same line
+	return false;}
   else {
-      string seq="1234321234321234";
       if ( lst[present.first][present.second] == seq[next] )
         return true;
       else {
@@ -41,22 +42,67 @@ void popup_page(){
   cout<<endl;
   }
 
-void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > lst, string &status) {       
- coord previous=present;
+void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > lst, string &status, int seq[20]) {
 
  int input=getch();
    if (input==68 || input==100){
-     
+
       if(present.first==1){
          status="invalid movement";
          return;}              // or show "u cant move like that"
+      
       if (present.first==3){
-        if (findcoord({1,present.second},used))
-	  status="invalid movement";                    /// this point is used alr! u cant move like this
-	 else 
-           present.first=1;
+        if (!findcoord({1,present.second},used)){
+	   present.first=1;
+	   return;}
+
+	 else {                  //opposite dot is used
+	   if (present.second==0){
+	     for (int i=1;i<4;i++){
+                 if (!findcoord({1,i},used)){
+                     present.first=1;
+		     present.second=i;
+		     return;}
+	     }
+	   }
+
+	   else if (present.second==1 || present.second==2){
+             if (!findcoord({1,present.second-1},used)){
+	        present.first=1;
+		present.second=present.second-1;
+                return;}
+
+	     if (!findcoord({1,present.second+1},used)){
+	        present.first=1;
+		present.second=present.second+1;
+		return;}
+
+	    if (present.second==1){              //check 3
+               if (!findcoord({1,3},used)){
+                  present.first=1;
+		  present.second=3;
+		  return; }
+	    }
+	    else {                    //present.second==2(check 0)
+               if (!findcoord({1,0},used)){
+                  present.first=1;
+		  present.second=0;
+		  return; }
+	    }
+	   }
+
+	   else {             //present.second=3
+	       for (int i=2;i>-1;i--){
+	         if (!findcoord({1,i},used)){
+		   present.first=1;
+		   present.second=i;
+		   return; }
+	       }
+	   }}
+	   status="invalid movement"; 
 	 return;
       }
+
         int n=present.second;
          while (n<3){
 	 if (!findcoord({present.first,n+1},used)){
@@ -79,26 +125,71 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
 	      present.first=1;
 	      present.second=i;
 	      return;
-	      } 
+	      }
 	   }
 	}
 	status="invalid movement";       ///the whole line is used -> error
 	return;            //what to do? or print "u cant move like that"
       }
-  
+
 
    else if (input==65 || input==97){
 
         if(present.first==3){
 	 status="invalid movement";
-         return;}         // or show "u cant move like that"
+         return;}
+	 // or show "u cant move like that"
         if (present.first==1){
-          if (findcoord({3,present.second},used))
-	    status="invalid movement";     /// this point is used alr! u cant move like this
-	  else 
-             present.first=3;
-	  return;
-        }
+	   if (!findcoord({3,present.second},used)){
+	   present.first=3;
+	   return;}
+
+	 else {                  //opposite dot is used
+	   if (present.second==0){
+	     for (int i=1;i<4;i++){
+                 if (!findcoord({3,i},used)){
+                     present.first=3;
+		     present.second=i;
+		     return;}
+	     }
+	   }
+
+	   else if (present.second==1 || present.second==2){
+             if (!findcoord({3,present.second-1},used)){
+	        present.first=3;
+		present.second=present.second-1;
+                return;}
+
+	     if (!findcoord({3,present.second+1},used)){
+	        present.first=3;
+		present.second=present.second+1;
+		return;}
+
+	    if (present.second==1){              //check 3
+               if (!findcoord({3,3},used)){
+                  present.first=3;
+		  present.second=3;
+		  return; }
+	    }
+	    else {                    //present.second==2(check 0)
+               if (!findcoord({3,0},used)){
+                  present.first=3;
+		  present.second=0;
+		  return; }
+	    }
+	   }
+
+	   else {             //present.second=3
+	       for (int i=2;i>-1;i--){
+	         if (!findcoord({3,i},used)){
+		   present.first=3;
+		   present.second=i;
+		   return; }
+	       }
+	   }}
+	   status="invalid movement";
+	 return;}
+
          int n=present.second;
          while (n>0){
 	 if (!findcoord({present.first,n-1},used)){
@@ -130,19 +221,63 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
    }
 
 
-
    else if (input==87 || input==119){
 
         if(present.first==0){
          status="invalid movement";
 	 return;} // or show "u cant move like that"
+
       if (present.first==2){
-        if (findcoord({0,present.second},used))
-	  status="invalid movement";           /// this point is used alr! u cant move like this
-	 else 
-           present.first=0;
-	 return;
-      }
+              if (!findcoord({0,present.second},used)){
+	   present.first=0;
+	   return;}
+
+	 else {                  //opposite dot is used
+	   if (present.second==0){
+	     for (int i=1;i<4;i++){
+                 if (!findcoord({0,i},used)){
+                     present.first=0;
+		     present.second=i;
+		     return;}
+	     }
+	   }
+
+	   else if (present.second==1 || present.second==2){
+             if (!findcoord({0,present.second-1},used)){
+	        present.first=0;
+		present.second=present.second-1;
+                return;}
+
+	     if (!findcoord({0,present.second+1},used)){
+	        present.first=0;
+		present.second=present.second+1;
+		return;}
+
+	    if (present.second==1){              //check 3
+               if (!findcoord({0,3},used)){
+                  present.first=0;
+		  present.second=3;
+		  return; }
+	    }
+	    else {                    //present.second==2(check 0)
+               if (!findcoord({0,0},used)){
+                  present.first=0;
+		  present.second=0;
+		  return; }
+	    }
+	   }
+
+	   else {             //present.second=3
+	       for (int i=2;i>-1;i--){
+	         if (!findcoord({0,i},used)){
+		   present.first=0;
+		   present.second=i;
+		   return; }
+	       }
+	   }}
+	   status="invalid movement";
+	 return; }
+
         int n=present.second;
          while (n>0){
 	 if (!findcoord({present.first,n-1},used)){
@@ -166,7 +301,7 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
 	      present.first=0;
 	      present.second=i;
 	      return;
-	      } 
+	      }
 	   }
 	}
 	status="invalid movement";       ///the whole line is used -> error
@@ -174,17 +309,62 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
    }
 
    else if (input==83 || input==115){
-        
+
 	 if(present.first==2){
            status="invalid movement";
 	   return;} // or show "u cant move like that"
-         if (present.first==0){
-         if (findcoord({2,present.second},used))
-	  status="invalid movement";         /// this point is used alr! u cant move like this
-	 else
-           present.first=2;
-	 return;
-      }
+        
+	 if (present.first==0){
+	   if (!findcoord({2,present.second},used)){
+	   present.first=2;
+	   return;}
+
+	 else {                  //opposite dot is used
+	   if (present.second==0){
+	     for (int i=1;i<4;i++){
+                 if (!findcoord({2,i},used)){
+                     present.first=2;
+		     present.second=i;
+		     return;}
+	     }
+	   }
+
+	   else if (present.second==1 || present.second==2){
+             if (!findcoord({2,present.second-1},used)){
+	        present.first=2;
+		present.second=present.second-1;
+                return;}
+
+	     if (!findcoord({2,present.second+1},used)){
+	        present.first=2;
+		present.second=present.second+1;
+		return;}
+
+	    if (present.second==1){              //check 3
+               if (!findcoord({2,3},used)){
+                  present.first=2;
+		  present.second=3;
+		  return; }
+	    }
+	    else {                    //present.second==2(check 0)
+               if (!findcoord({2,0},used)){
+                  present.first=2;
+		  present.second=0;
+		  return; }
+	    }
+	   }
+
+	   else {             //present.second=3
+	       for (int i=2;i>-1;i--){
+	         if (!findcoord({2,i},used)){
+		   present.first=2;
+		   present.second=i;
+		   return; }
+	       }
+	   }}
+	   status="invalid movement";
+	 return;}
+
         int n=present.second;
          while (n<3){
 	 if (!findcoord({present.first,n+1},used)){
@@ -217,15 +397,16 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
 
    else if (input== 10){              //input=enter
       //create a previous point,so if present and previous lie on same line-> dont allow
-       if (canconnect(next,lst,present,previous,status)) {
+       if (canconnect(next,lst,present,status,used,seq)){
          used.push_back(present);
 	 next+=1;
+	 status="connect";
        }
 	return;}
 
 
    else if (input==81 || input==113){           //input='Q' or 'q' ->quit
-     /////HV TO PRINT THE BG ONCE, TO SHOW THE LIST OF CHOICES !  
+     /////HV TO PRINT THE BG ONCE, TO SHOW THE LIST OF CHOICES !
       popup_page();      ///choose: restart(R) / new game(N) / return(Q)
 
       int choice=getch();
@@ -235,16 +416,16 @@ void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > 
 
       if (choice == 81 || choice == 113)       //Q-> return to game, nth happen
            return;
-      
+
       else if (choice == 82 || choice == 114){       //R -> restart, play again with the same map
            present.first=0;
 	   present.second=0;
 	   used.clear();
-	   used.push_back({0,0});    //clear the used list-> all dots become unused 
+	   used.push_back({0,0});    //clear the used list-> all dots become unused
 	   next=1;               //crestart the process
            return;
       }
-	      
+
       else if (choice == 78 || choice == 110){             ///N -> start a new game
             status="end";
             /////generate a new map
@@ -256,6 +437,4 @@ else {                               //input= sth else-> retype
       return;
  }
 
-	// endwin();  // End ncurses??
 }
-
