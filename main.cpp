@@ -18,7 +18,7 @@ int main() {
 while (true) { 
   string status="normal";
   int next=1;
-  coord present={0,0} ;
+  coord present= {0,0};
   vector<coord> used = { {0,0} };
   system("clear");
   int mode = printmainpage();      //print the main page of the game
@@ -28,12 +28,15 @@ while (true) {
   if (mode == 2){
     int c = 0;
     while (c < 16){
-      for ( int i = 1; i < 6; i++){
+      for ( int i = 1; i < 7; i++){
         seq[c] = i;
-	      c++ ;}
-      for ( int i = 6; i > 1; i--){
+	c++ ;}
+      for ( int i = 5; i > 0; i--){
       	seq[c] = i;
-	      c++ ;}
+	c++ ;}
+      for (int i=2;i<7;i++){
+	seq[c]=i;
+	c++;}
     }
   }
 
