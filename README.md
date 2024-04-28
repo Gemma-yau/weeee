@@ -12,7 +12,7 @@ Yau Wing Sze (UID : 3036219267)
 ### Board:
 
 ### Moving:
-The current dot is controlled via the `w`, `a`, `s`, `d` keys (`w`/`s` control upwards and downwards, while `a`/`d` control left and right). To confirm connecting the present point, player can press the enter key. A pop-up message will be shown when there is an invalid movement or incorrect connection.
+The current dot is controlled via the `w`, `a`, `s`, `d` keys (`w`/`s` control upwards and downwards, while `a`/`d` control left and right). To confirm connecting the present point, player can press the `enter` key. A pop-up message will be shown when there is an invalid movement or incorrect connection.
 
 ### ??:
 Players can pause the game via the `q` key, a table will be shown after `q` key is pressed.   
