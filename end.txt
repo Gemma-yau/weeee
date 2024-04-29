@@ -1,0 +1,11 @@
+     ######################################
+     #                                    #
+     #    EEEEEE    N     N    D D        #
+     #    E         NN    N    D   D      #
+     #    E         N N   N    D    D     #
+     #    EEEEEE    N  N  N    D     D    #
+     #    E         N   N N    D    D     #
+     #    E         N    NN    D   D      #
+     #    EEEEEE    N     N    D D        #
+     #                                    #
+     ######################################
