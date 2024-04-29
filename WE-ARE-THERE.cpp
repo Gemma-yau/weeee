@@ -7,6 +7,7 @@
 #include <iomanip>
 #include <stdlib.h>
 #include <time.h>
+#include <fstream>
 using namespace std;
 
 
@@ -41,8 +42,14 @@ bool findcoord(coord point,vector<coord> used){
 }
 
 vector<vector<int>> setBoard(int Number[20]){
-  int size = 4;
-  int num = 1;
+  ifstream fin;
+	fin.open("size.txt");
+	if (fin.fail()){
+		cout << "error in file opening" << endl;
+		exit(1);}
+	fin >> size;
+	fin.close();
+	int num = 1;
   srand(time(NULL));
 
   vector < vector <int> > lst;
