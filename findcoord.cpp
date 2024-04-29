@@ -1,5 +1,5 @@
 ///to check if the dot has been used or not, return true if used.
-///input: the coordinates of dot you want to check, the vector storung all dots that have been used
+///input: the coordinates of dot you want to check, the vector storing all dots that have been used
 
 #include <iostream>
 #include <vector>
