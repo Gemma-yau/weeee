@@ -29,7 +29,7 @@ Press `'Q'` key to pause the game, a table will be displayed afterwards.
 2. We used *int next* to access the number that should be connected next. The value of *next* will be increased by 1 after every successful connection. *string status* is used to end the game if the player wins/loses/quits and it will also be changed in case the player makes an invalid movement or incorrect connection.  *(Data structures for storing game status)*
 
 3.  We used a vector to store all the dots that have been used / connected, to prevent the usage of the same dot twice and the player will win once the size of the vector equals to the total number of dots. *(Dynamic memory management)*
-4. *(File input/output)*
+4. The result’s message is stored in a text file for easy preview during design. Then we read from the text file to print the message out. *(File input/output)*
 5. Functions are stored in different files *(Program codes in multiple files)*
 
 ## Compilation and execution instructions 
