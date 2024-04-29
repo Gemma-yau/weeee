@@ -19,62 +19,51 @@ vector<vector<int>> setBoard(int Number[20]){
 
   //## add num into lst ##
   while (true){
-    int iPos = pos[0];
-    int que[20], queCount = 0;
+    int iPos = pos[0]; 			//## iPos = the row of the previous num
+    int que[20], queCount = 0;		//## que[20] = storing candidate; queCount = num of possible row/cell
 
     for (int i = 0; i < size; i++){
       if ( i != pos[0] ){                                 
-        int x = count(lst[i].begin(), lst[i].end(), 0);
+        int x = count(lst[i].begin(), lst[i].end(), 0);			//## count the empty space in a row
 
-        if (x > 1){   			//## see if that row have enough space for adding a num ##
-	  que[queCount] = i;
+        if (x > 1){   			//## if that row has more than 1 space for adding a num 
+	  que[queCount] = i;		//## add to candidate
           queCount++;
 	}
       }
     }  
     
-    if (queCount == 0){
-    	for (int i = 0; i < size; i++){
-	  if ( i != pos[0] && count(lst[i].begin(), lst[i].end(), 0) != 0){
+    if (queCount == 0){			//## if none of the rows have more than one space
+    	for (int i = 0; i < size; i++){	
+	  if ( i != pos[0] && count(lst[i].begin(), lst[i].end(), 0) != 0){		//## if that row is not the same as the previous num and is not full
 	    que[queCount] = i;
 	    queCount++;
 	  }
         }
     }
-    if (queCount == 0){
+    if (queCount == 0){			//## queCount still = 0 --> all rows are full
     	break;
     }
-    else if (queCount > 1){
-    	iPos = que[rand() % (queCount)];          //## set the first pos for adding new num ##
+    else if (queCount > 0){
+    	iPos = que[rand() % (queCount)];          //## set the first position (row)
     }
-    else if (queCount == 1){
-	iPos = que[0];
-    }
-
+	  
     queCount = 0;
 
     for (int i = 0; i < size; i++){
-      if (lst[iPos][i] == 0){                //## if the pos is empty ##
+      if (lst[iPos][i] == 0){                //## if the cell is empty ##
 	que[queCount] = i;
         queCount++;
       }
     }
     
-    int iPos2 = que[rand() % (queCount)];    //## set the second pos for adding new num ##
-    lst[iPos][iPos2] = Number[num];
+    int iPos2 = que[rand() % (queCount)];    //## set the second pos (cell)
+    lst[iPos][iPos2] = Number[num];		//## add the number into that cell
     num++;
 
     pos[0] = iPos;
     pos[1] = iPos2;
 }
-
-  //## print the board ##
-  // for (int i = 0; i < size; i++){
-  //   for (int j = 0; j < size; j++){
-  //     cout << lst[i][j] << " ";
-  //   }
-  //   cout << endl;
-  // }
 
 //## return lst ##
 return lst;
