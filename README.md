@@ -24,7 +24,7 @@ Press `'Q'` key to pause the game, a table will be displayed afterwards.
 - `Start a New Game (N)` --> start a new game (with a different board)
 
 ## Features 🫵🏻
-1. The integers around the boards are generated randomly in each round. (Generation of random game sets)
-2. We used *int status* to access the number that should be connected next. The value of status will increased by 1 after every successful connection. <sup> (Data structures for storing game status)</sup>
+1. The integers around the boards are generated randomly in each round. *(Generation of random game sets)*
+2. We used *int status* to access the number that should be connected next. The value of status will increased by 1 after every successful connection. *(Data structures for storing game status)*
 3. We created a vector to store all the dots that have been used, to prevent the usage of the same dot twice and the player will win once the size of the vector equals to the total number of dots.
 4. 
