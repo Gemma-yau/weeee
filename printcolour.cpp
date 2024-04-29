@@ -11,7 +11,8 @@ using namespace std;
 #define Red   "\033[31m"      
 #define Yellow  "\033[33m"   
 
-
+/// to print the dots with different colours
+/// red: used , unused: green , current position: yellow 
 void printdot(coord point,vector<coord> used,coord present){
    for (int i=0;i<used.size();i++){
        if (used[i].first==point.first && used[i].second==point.second){
@@ -29,6 +30,7 @@ void printdot(coord point,vector<coord> used,coord present){
        return;
     } 
 
+/// to print the mainpage of the game and also receive the game mode chosen by the player
 int printmainpage() {
   cout<<endl<<endl<<endl;
   cout<<"     "<<"       "<<Yellow<<"•                                            "<<endl;
@@ -63,7 +65,7 @@ int printmainpage() {
   cout<<endl<<endl;
 
   int want=getch();                  //mode=1(easy), mode=2(hard)
-  while (want != 49 && want != 50) 
+  while (want != 49 && want != 50)         //reload until player presses either 1 or 2
       want = getch();
    if (want == 49)
         return 1;
