@@ -32,7 +32,7 @@ Press `'Q'` key to pause the game, a table will be displayed afterwards.
 4. The result’s message is stored in a text file for easy preview during design. Then we read from the text file to print the message out.    *(File input/output)*
 5. Functions are stored in different files.    *(Program codes in multiple files)*
 
-## Compilation and execution instructions 
+## Compilation and execution instructions 😝
 1. Download the zip file
 2. type `make ctd` command
 3. type `./ctd` command
