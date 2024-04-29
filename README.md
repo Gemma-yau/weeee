@@ -31,3 +31,5 @@ Press `'Q'` key to pause the game, a table will be displayed afterwards.
 3.  We used a vector to store all the dots that have been used / connected, to prevent the usage of the same dot twice and the player will win once the size of the vector equals to the total number of dots. *(Dynamic memory management)*
 4. *(File input/output)*
 5. Functions are stored in different files *(Program codes in multiple files)*
+
+## Compilation and execution instructions 
