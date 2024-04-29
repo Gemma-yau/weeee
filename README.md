@@ -14,7 +14,7 @@ Each integer is represented by a dot and each dot must be used once (and at most
 
 The game is SUPER easy to play.
 
-First,press the `'enter' key` to get into the game, then select the game mode you would like to play and get your game started!!
+First,press the `enter` key to get into the game, then select the game mode you would like to play and get your game started!!
 
 Your starting position will be at the dot in the top left corner. Press the `WASD keys` to navigate to other dots. Press the 'enter' key to connect dots. A pop-up message will be shown when there is an invalid movement or incorrect connection. The 'progress' line above the square showes the current progress of the game and the integers to be connected next.
 
