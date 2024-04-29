@@ -6,6 +6,8 @@
 
 using namespace std;
 
+/// tp generate the position of integers randomly
+/// input: array of integers (1-4 for easy mode, 1-6 for hard mode)
 vector<vector<int>> setBoard(int Number[20]){
   int size = 4;
   int num = 1;
