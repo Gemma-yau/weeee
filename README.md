@@ -8,7 +8,7 @@ Yau Wing Sze (UID : 3036219267)
 
 Integers are randomly displaced around a square-shaped board , player has to first connect them in ascending order,e.g. "1,2,3,4" , then in descending order, e.g. "1,2,3,4,3,2,1", and so on, until all the integers are being used.
 
-Each integer is represented by a dot and each dot must be used once (and at most once). Consecutive intergers cannot be from the same side. 
+Each integer is represented by a dot and each dot must be used once (and at most once). Interger to be connected cannot be from the same side as the previous dot.
 
 ## How to play 💬
 
