@@ -13,7 +13,7 @@ using namespace std;
 #define Yellow  "\033[33m"   
 #define Black   "\033[30m"
 
-// to print the game setting , including the progress line and the board
+// to print the whole game, including the progress line and the board
 void printbg(string status,coord present,vector<coord> used,int next, vector < vector<int>> lst, int mode) {
    if (status=="end")
       return;
