@@ -13,6 +13,7 @@ using namespace std;
 #define Yellow  "\033[33m"   
 #define Black   "\033[30m"
 
+// to print out the game setting , including the progress line and the board
 void printbg(string status,coord present,vector<coord> used,int next, vector < vector<int>> lst, int mode) {
    if (status=="end")
       return;
@@ -20,7 +21,7 @@ void printbg(string status,coord present,vector<coord> used,int next, vector < v
    string process=(mode == 1)?"1234321234321234":"123456543212345654321234";
    
    cout<<endl;        
-   cout<<"   Progress : ";             //printing process
+   cout<<"   Progress : ";              //printing progress
    for (int i=0;i<next;i++)
      cout<<Black<<process[i]<<reset;
      cout<<' '<<Yellow<<process[next]<<reset<<' '; 
@@ -31,7 +32,7 @@ void printbg(string status,coord present,vector<coord> used,int next, vector < v
     cout<<endl<<endl;
     
     cout<<"     ";   
-    for (int i=0;i<4;i++){     //printing numbers corresponding to dots
+    for (int i=0;i<4;i++){       
         cout<<"      ";
         cout<<lst[0][i];}
         
@@ -63,7 +64,7 @@ void printbg(string status,coord present,vector<coord> used,int next, vector < v
     }
  }
 
- else {                        //print the message frame
+ else {                           //print the message box
        cout<<"     ";
        cout<<"|"<<setw(33)<<"|"<<endl;
        cout<<"  "<<lst[3][0]<<"  ";
@@ -81,7 +82,7 @@ void printbg(string status,coord present,vector<coord> used,int next, vector < v
        cout<<"  "<<lst[1][1];
        cout<<endl;   
        
-/////print msg here
+// print the message accordingly to the status
               
     if (status=="connect fail-same line") {
         cout<<"     ";
