@@ -1,13 +1,15 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <stdlib.h>     //for clear screen
+#include <stdlib.h>     //for clearing screen
 #include "getch.h"
 #include "printcolour.h"            //for struct coord
 #include "findcoord.h"
 #include "move.h"
 using namespace std;
 
+/// to check if the connection is feasible when the player presses 'enter' key and attempts to connect two dots
+/// return false if the connection is not feasible, and also changes the string status so as to enable the printing of pop-up message box accordingly
 bool canconnect(int next, vector< vector<int> > lst, coord present, string &status, vector<coord> used, int seq[20]){           
 	int lent=used.size();
 	coord previous=used[lent-1];
