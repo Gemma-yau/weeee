@@ -1,16 +1,16 @@
-## Team members🤖
+## Team members 🤖
 Wong Man Yi (UID : 3036225058)
 
 Yau Wing Sze (UID : 3036219267) 
 
-## About this game
+## About this game 🪧
 **Connet the Dots** is a puzzle game requiring player to connect integers in ascending and descending orders alternatively.
 
-Integers are randomly displaced around a square , player has to first connect them in ascending order,e.g. "1,2,3,4" , then in descending order, e.g. "1,2,3,4,3,2,1", and so on, until all the integers are being used.
+Integers are randomly displaced around a square-shaped board , player has to first connect them in ascending order,e.g. "1,2,3,4" , then in descending order, e.g. "1,2,3,4,3,2,1", and so on, until all the integers are being used.
 
 Each integer is represented by a dot and each dot must be used once (and at most once). Consecutive intergers cannot be from the same side. 
 
-## How to play
+## How to play 💬
 
 The game is SUPER easy to play.
 
@@ -22,3 +22,9 @@ Press `'Q'` key to pause the game, a table will be displayed afterwards.
 - `Return (Q)` --> return to the game  
 - `Restart (R)` --> restart the game (with the same board) 
 - `Start a New Game (N)` --> start a new game (with a different board)
+
+## Features 🫵🏻
+1. The integers around the boards are generated randomly in each round.
+2. We used *int status* to access the number that should be connected next. The value of status will increased by 1 after every successful connection.
+3. We created a vector to store all the dots that have been used, to prevent the usage of the same dot twice and the player will win once the size of the vector equals to the total number of dots.
+4. 
