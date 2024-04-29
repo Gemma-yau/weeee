@@ -20,7 +20,7 @@ void printbg(string status,coord present,vector<coord> used,int next, vector < v
    string process=(mode == 1)?"1234321234321234":"123456543212345654321234";
    
    cout<<endl;        
-   cout<<"   Process : ";             //printing process
+   cout<<"   Progress : ";             //printing process
    for (int i=0;i<next;i++)
      cout<<Black<<process[i]<<reset;
      cout<<' '<<Yellow<<process[next]<<reset<<' '; 
