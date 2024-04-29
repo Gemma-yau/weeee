@@ -20,6 +20,6 @@ Your starting position will be at the dot in the top left corner. Press the WASD
 
 Press 'Q' key to pause the game, a table will be displayed afterwards.
 - 
-`Return (Q)` --> return to the game  
+Return (Q) --> return to the game  
 `Restart (R)` --> restart the game with the same board  
 `Start a new game (N)` --> start a new game with a different board  
