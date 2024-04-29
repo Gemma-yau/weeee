@@ -1,4 +1,5 @@
 /// to receive keyboard input from the users without displaying/printing the input on screen
+///return the ASCII value of the input
 #include <iostream>
 #include <termios.h>
 #include <unistd.h>
