@@ -5,6 +5,7 @@
 #include "getch.h"
 using namespace std;
 
+/// to print the ending screen (win/lose/end)
 void printresult(string status){
   system("clear");
   ifstream fin;
