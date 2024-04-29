@@ -22,6 +22,7 @@ vector<vector<int>> setBoard(int Number[20]){
     int iPos = pos[0]; 			//## iPos = the row of the previous num
     int que[20], queCount = 0;		//## que[20] = storing candidate; queCount = num of possible row/cell
 
+    // deciding the which row to add
     for (int i = 0; i < size; i++){
       if ( i != pos[0] ){                                 
         int x = count(lst[i].begin(), lst[i].end(), 0);			//## count the empty space in a row
@@ -47,7 +48,8 @@ vector<vector<int>> setBoard(int Number[20]){
     else if (queCount > 0){
     	iPos = que[rand() % (queCount)];          //## set the first position (row)
     }
-	  
+
+    // deciding the which cell to add
     queCount = 0;
 
     for (int i = 0; i < size; i++){
@@ -65,6 +67,6 @@ vector<vector<int>> setBoard(int Number[20]){
     pos[1] = iPos2;
 }
 
-//## return lst ##
+//return a 2D vector which stores the numbers of the board
 return lst;
 }
