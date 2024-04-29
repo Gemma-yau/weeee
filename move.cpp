@@ -48,7 +48,10 @@ void popup_page(){
 /// to receive the player's input (kepboard pressing) and changes the player's position accordingly (moving up/down/left/right)
 /// it also changes the string status to "invalid movement" if the player moves wrongly
 /// e.g. attempting to move to the right even if he/she is on the rightest line already
-/// to facilitate reading : struct coord is defined in 
+
+/// to facilitate reading : struct coord is defined in printcolour.h.
+/// coord.first represents line, top line=0,right line=1, bottom line=2, left line=3
+/// coord.second represents position, range: 0-3, starts at the left/top
 void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > lst, string &status, int seq[20]) {
 
  int input=getch();
