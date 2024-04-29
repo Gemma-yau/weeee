@@ -18,15 +18,8 @@ First,press the 'enter' key to get into the game, then select the game mode you 
 
 Your starting position will be at the dot in the top left corner. Press the WASD keys to navigate to other dots. Press the 'enter' key to connect dots. A pop-up message will be shown when there is an invalid movement or incorrect connection. The 'progress' line above the square showes the current progress of the game and the integers to be connected next.
 
-
-### Board:
-`Process : 1 2 34321234321234`  the colored and separated number indicates the next number that the player should connect to.
-
-### Moving:
-The current dot is controlled via the `w`, `a`, `s`, `d` keys (`w`/`s` control upwards and downwards, while `a`/`d` control left and right). To confirm connecting the present point, player can press the `enter` key. A pop-up message will be shown when there is an invalid movement or incorrect connection.
-
-### ??:
-Players can pause the game via the `q` key, a table will be shown after `q` key is pressed.   
+Press 'Q' key to pause the game, a table will be displayed afterwards.
+- 
 `Return (Q)` --> return to the game  
 `Restart (R)` --> restart the game with the same board  
 `Start a new game (N)` --> start a new game with a different board  
