@@ -1,4 +1,4 @@
-# CONNECT THE DOTS
+# Connect the Dots
 
 ## Team members 🤖
 Wong Man Yi (UID : 3036225058)
