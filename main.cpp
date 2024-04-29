@@ -22,7 +22,6 @@ while (true) {
   vector<coord> used = { {0,0} };
   system("clear");
   int mode = printmainpage();      //print the main page of the game
-                           //receive the enter button
 
   int seq[20] = {1,2,3,4,3,2,1,2,3,4,3,2,1,2,3,4,1};
   if (mode == 2){
@@ -44,11 +43,11 @@ while (true) {
   printbg(status, present, used, next, board, mode);
 
   while (status !="end" && status !="lose" && status!="win") {
-    status="normal" ;     //reset_the_content_of_status 
+    status="normal" ;          //reset the status 
     move(used, present, next, board, status, seq);
     printbg(status, present, used, next, board, mode);
     win(status, used);
-    if (status == "connect")
+    if (status == "connect")     
      lose(status, next, 4, present, board, used, seq) ;
   }
 
