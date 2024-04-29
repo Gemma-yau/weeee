@@ -1,4 +1,4 @@
-## Game Inventors🤖
+## Team members🤖
 Wong Man Yi (UID : 3036225058)
 
 Yau Wing Sze (UID : 3036219267) 
