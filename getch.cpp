@@ -1,3 +1,4 @@
+/// to receive keyboard input from the users without displaying/printing the input on screen
 #include <iostream>
 #include <termios.h>
 #include <unistd.h>
