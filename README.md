@@ -4,7 +4,9 @@ Wong Man Yi (UID : 3036225058)
 Yau Wing Sze (UID : 3036219267) 
 
 ## About this game
-**Connet the Dots** is a puzzle game requiring players to connect integers in ascending and descending orders alternatively.  Integers are randomly displaced around a square , players have to first connect them in ascending order,e.g."1,2,3,4", then in descending order, e.g."1,2,3,4,3,2,1", and so on.
+**Connet the Dots** is a puzzle game requiring players to connect integers in ascending and descending orders alternatively.
+
+Integers are randomly displaced around a square , players have to first connect them in ascending order,e.g."1,2,3,4", then in descending order, e.g."1,2,3,4,3,2,1", and so on.
 
 Each integer is represented by a dot and each dot must be used once. Consecutive intergers cannot be from the same side. 
 
