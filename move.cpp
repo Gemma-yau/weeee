@@ -14,18 +14,19 @@ bool canconnect(int next, vector< vector<int> > lst, coord present, string &stat
 	int lent=used.size();
 	coord previous=used[lent-1];
 if (present.first == previous.first){
-	status= "connect fail-same line";   // cant work cuz they lie on same line
+	status= "connect fail-same line";   // cant work cuz the 2 dots are on the same line
 	return false;}
   else {
       if ( lst[present.first][present.second] == seq[next] )
         return true;
       else {
-      status="connect fail-number";              //say cant cuz this isnt the next number
+      status="connect fail-number";              //cant work cuz the integer doesnt match
       return false;
       }
   }
 }
 
+/// print a table when the player presses the 'Q' key
 void popup_page(){
   system("clear");
   cout<<endl<<endl<<endl;
@@ -44,14 +45,18 @@ void popup_page(){
   cout<<endl;
   }
 
+/// to receive the player's input (kepboard pressing) and changes the player's position accordingly (moving up/down/left/right)
+/// it also changes the string status to "invalid movement" if the player moves wrongly
+/// e.g. attempting to move to the right even if he/she is on the rightest line already
+/// to facilitate reading : struct coord is defined in 
 void move (vector<coord> &used, coord &present,int &next, vector< vector<int> > lst, string &status, int seq[20]) {
 
  int input=getch();
    if (input==68 || input==100){
 
-      if(present.first==1){
+      if(present.first==1){   
          status="invalid movement";
-         return;}              // or show "u cant move like that"
+         return;}              
       
       if (present.first==3){
         if (!findcoord({1,present.second},used)){
