@@ -3,7 +3,11 @@
 
 int getch() {
   struct termios old,newone;
-  tcgetattr(STDIN_FILENO, &old) ;
+  tcgetattr(0, &old) ;
   newone=old;
-  
+  cfmakeraw(&newone);
+  tcsetattr(0,TCSANOW,&newone);
+  int value=getchar();
+  tcsetattr(0,TCSANOW,&old);
+  return value;
 }
