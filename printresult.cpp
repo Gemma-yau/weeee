@@ -29,9 +29,6 @@ void printresult(string status){
      cout << line << endl;}
   cout<<endl;
   fin.close();
-
-  usleep(1000000);
-  cout << "                      [PRESS ENTER TO START A NEW GAME]" << endl;
   int get=getch();
   while (get != 10)
     get=getch();
