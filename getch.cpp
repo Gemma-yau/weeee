@@ -1,5 +1,5 @@
 #include <iostream>
-#include <termio.h>
+#include <termios.h>
 #include "getch.h"
 
 /// to receive keyboard input from the player without displaying/printing it on the screen
