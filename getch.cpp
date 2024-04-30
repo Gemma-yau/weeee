@@ -9,9 +9,9 @@ int getch() {
     struct termios oldtermios, newtermios ;
     tcgetattr(STDIN_FILENO, &oldtermios) ;      //store the old one
     newtermios = oldtermios ;
-    newtermios.c_lflag &= ~(ICANON | ECHO);        //change it
+    newtermios.c_lflag &= ~(ICANON | ECHO);       
     tcsetattr(STDIN_FILENO, TCSANOW, &newtermios);    //use the new one
     int value = getchar();
-    tcsetattr(STDIN_FILENO, TCSANOW, &oldtermios);           //switch back the old one
+    tcsetattr(STDIN_FILENO, TCSANOW, &oldtermios);           //switch back
     return value;
 }
