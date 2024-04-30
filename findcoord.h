@@ -2,6 +2,7 @@
 #define FINDCOORD_H
 
 #include "printcolour.h"
+using namespace std;
 bool findcoord(coord point,vector<coord> used);
 
 #endif
