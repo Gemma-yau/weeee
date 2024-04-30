@@ -1,5 +1,7 @@
 # Connect the Dots
 
+https://github.com/Gemma-yau/weeee/issues/2#issue-2270868837
+
 ## Team members 🤖
 Wong Man Yi (UID : 3036225058)
 
