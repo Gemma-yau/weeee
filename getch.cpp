@@ -7,11 +7,15 @@
 /// return the ASCII value of the input
 int getch() {
     struct termios old, newone ;
+    int value;
+    
     tcgetattr(STDIN_FILENO, &old) ;      //store the old one
     newone = old ;
     newone.c_lflag &= ~(ICANON | ECHO);       
     tcsetattr(STDIN_FILENO, TCSANOW, &newone);    //use the new one
-    int value = getchar();
+    
+    value = getchar();
+    
     tcsetattr(STDIN_FILENO, TCSANOW, &old);           //switch back
     return value;
 }
